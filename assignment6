@@ -1,0 +1,46 @@
+package Assignment6;
+
+public interface Rental {
+	void rentVehicle(int days);
+	void calculateRent(int days);
+	void displayDetails();
+
+}
+
+class Car implements Rental{
+	int vehicleid;
+	String vehicleName;
+	int rentperday;
+	public Car(int vehicleid, String vehicleName, int rentperday) {
+		this.vehicleid = vehicleid;
+		this.vehicleName = vehicleName;
+		this.rentperday = rentperday;
+	}
+	public void rentVehicle(int days) {
+		System.out.println("ENter the number of days:"+days);
+		System.out.println("Rent per day is: "+rentperday);
+		
+		
+	}
+	public  void calculateRentint(int days) {
+		int rent =days*rentperday;
+		if(days>5) {
+			rent =(int) (rent-(rent*0.1));
+			System.out.println("Rent after discount is :"+rent);
+			
+		}
+		else {
+			rent=rent;
+		}
+	}
+	
+	
+}
+
+class Bike implements Rental{
+	int vehicleid;
+	String vehicleName;
+	int rentperday;
+	
+	
+}
